@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Toolkit Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1410 0%, #2d1b1a 50%, #1a1410 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .gradient-accent {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 25%, #a855f7 75%, #7c3aed 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 16px;
+            padding: 60px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(255, 107, 53, 0.1);
+        }
+
+        header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 25%, #a855f7 75%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            background: linear-gradient(135deg, #ff6b35 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin: 30px 0 15px 0;
+            color: #ff6b35;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #c0c0c0;
+            font-size: 1.05em;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: #c0c0c0;
+            font-size: 1.05em;
+        }
+
+        strong {
+            color: #ff6b35;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .tool-card {
+            background: rgba(255, 107, 53, 0.05);
+            border-left: 4px solid;
+            border-image: linear-gradient(135deg, #ff6b35 0%, #a855f7 100%) 1;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .benefits {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .benefits li {
+            margin-bottom: 15px;
+        }
+
+        .benefits strong {
+            color: #a855f7;
+        }
+
+        .highlight {
+            background: rgba(255, 107, 53, 0.1);
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent);
+            margin: 50px 0;
+        }
+
+        .project-files {
+            background: rgba(124, 58, 237, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+        }
+
+        .project-files p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            p, li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cybersecurity Toolkit Project</h1>
+        </header>
+
+        <section class="section">
+            <h2>Overview</h2>
+            <p>Designed and evaluated a comprehensive cybersecurity toolkit for small businesses and personal networks using industry-standard tools.</p>
+        </section>
+
+        <section class="section">
+            <h2>Tools Selected & Justification</h2>
+
+            <div class="tool-card">
+                <h3>1. Bitdefender Total Security (Endpoint Protection)</h3>
+                <ul>
+                    <li><strong>Multi-layered defense</strong> against malware, ransomware, and phishing</li>
+                    <li>Real-time threat detection with vulnerability scanner</li>
+                    <li>Lightweight design—doesn't slow system performance</li>
+                    <li>Additional features: built-in VPN and password manager</li>
+                </ul>
+            </div>
+
+            <div class="tool-card">
+                <h3>2. pfSense (Firewall & IDS/IPS)</h3>
+                <ul>
+                    <li>Open-source, cost-effective enterprise-grade solution</li>
+                    <li>Filters traffic and blocks unauthorized access</li>
+                    <li>Real-time intrusion detection and prevention (IDS/IPS)</li>
+                    <li>Highly customizable for specific network requirements</li>
+                    <li>Comparable to proprietary firewalls but at a fraction of the cost</li>
+                </ul>
+            </div>
+
+            <div class="tool-card">
+                <h3>3. NordVPN (Data Encryption)</h3>
+                <ul>
+                    <li>Military-grade encryption for data in transit</li>
+                    <li>Critical for remote workers on public Wi-Fi</li>
+                    <li>Advanced features: double VPN and onion routing</li>
+                    <li>Cross-device compatibility for seamless deployment</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Architecture Overview</h2>
+            <p>The three tools work together in a layered defense strategy.</p>
+        </section>
+
+        <section class="section">
+            <h2>Implementation Strategy</h2>
+
+            <h3>For Small Business:</h3>
+            <ol style="margin-left: 25px; margin-bottom: 25px;">
+                <li><strong>pfSense</strong> deployed at network perimeter (controls all traffic)</li>
+                <li><strong>Bitdefender</strong> installed on all employee endpoints</li>
+                <li><strong>NordVPN</strong> for remote workers accessing company network</li>
+            </ol>
+
+            <h3>Cost Analysis:</h3>
+            <ul>
+                <li>pfSense: $0 (open-source)</li>
+                <li>Bitdefender: ~$50-80/year per device</li>
+                <li>NordVPN: ~$5-12/month per user</li>
+                <li><strong>Total</strong>: Cost-effective compared to enterprise solutions</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Key Benefits</h2>
+            <div class="benefits">
+                <ul style="list-style: none; margin-left: 0;">
+                    <li>✓ <strong>Layered approach</strong>: If one defense is breached, others continue protecting</li>
+                    <li>✓ <strong>Cost-effective</strong>: Open-source + affordable commercial tools</li>
+                    <li>✓ <strong>Enterprise-grade</strong>: Professional-level protection for SMBs</li>
+                    <li>✓ <strong>Practical deployment</strong>: Easy to implement and manage</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Why This Combination?</h2>
+            <p>This toolkit addresses the complete security spectrum:</p>
+            <ul>
+                <li><strong>Bitdefender</strong> = Device security (malware/phishing prevention)</li>
+                <li><strong>pfSense</strong> = Network security (threat detection and blocking)</li>
+                <li><strong>NordVPN</strong> = Data security (encryption and privacy)</li>
+            </ul>
+            <p style="margin-top: 20px;">For example: If a remote worker downloads malicious software:</p>
+            <ol style="margin-left: 25px; margin-bottom: 25px;">
+                <li><strong>NordVPN</strong> encrypts their connection (secure transmission)</li>
+                <li><strong>Bitdefender</strong> detects and removes the malware (device protection)</li>
+                <li><strong>pfSense</strong> prevents malicious traffic from reaching the network (network protection)</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section class="project-files">
+            <h2>Project Files</h2>
+            <p>📄 <strong>tool-comparison.md</strong> - Detailed comparison with alternatives</p>
+            <p>📄 <strong>deployment-guide.md</strong> - Step-by-step implementation</p>
+            <p>📄 <strong>hardening-script.ps1</strong> - Automation scripts</p>
+        </section>
+    </div>
+</body>
+</html>
