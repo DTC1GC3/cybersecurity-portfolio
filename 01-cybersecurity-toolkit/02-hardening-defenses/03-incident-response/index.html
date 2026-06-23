@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Response & Critical Infrastructure Security</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1410 0%, #2d1b1a 50%, #1a1410 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 16px;
+            padding: 60px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(255, 107, 53, 0.1);
+        }
+
+        header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 25%, #a855f7 75%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            background: linear-gradient(135deg, #ff6b35 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin: 30px 0 15px 0;
+            color: #ff6b35;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #c0c0c0;
+            font-size: 1.05em;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: #c0c0c0;
+            font-size: 1.05em;
+        }
+
+        strong {
+            color: #ff6b35;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .content-box {
+            background: rgba(255, 107, 53, 0.05);
+            border-left: 4px solid;
+            border-image: linear-gradient(135deg, #ff6b35 0%, #a855f7 100%) 1;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .threat-item {
+            background: rgba(255, 107, 53, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .strategy-item {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .strategy-item h4 {
+            color: #a855f7;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .phase-box {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #a855f7;
+        }
+
+        .phase-box h4 {
+            color: #a855f7;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .benefits {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .benefits li {
+            margin-bottom: 12px;
+        }
+
+        .benefits strong {
+            color: #a855f7;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent);
+            margin: 50px 0;
+        }
+
+        .project-files {
+            background: rgba(124, 58, 237, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+        }
+
+        .project-files p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            p, li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Incident Response & Critical Infrastructure Security</h1>
+        </header>
+
+        <section class="section">
+            <h2>Overview</h2>
+            <p>Analysis of cybersecurity threats to critical infrastructure (power grid) and development of a comprehensive defense strategy and incident response plan.</p>
+        </section>
+
+        <section class="section">
+            <h2>Critical Infrastructure Focus: Energy Sector (Power Grid)</h2>
+
+            <h3>Why It Matters</h3>
+            <p>The power grid is essential infrastructure supporting:</p>
+            <ul>
+                <li>Healthcare systems (hospitals, life-saving equipment)</li>
+                <li>Water treatment and distribution</li>
+                <li>Communication networks</li>
+                <li>Financial systems</li>
+                <li>Supply chain operations</li>
+            </ul>
+
+            <h3>Key Vulnerabilities</h3>
+            <ul>
+                <li>Complex, interconnected infrastructure</li>
+                <li>Reliance on legacy systems</li>
+                <li>Increasing digitalization and connectivity</li>
+                <li>Wide attack surface with multiple entry points</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Threat Landscape</h2>
+
+            <div class="threat-item">
+                <h4 style="color: #ff6b35; margin-top: 0;">Ransomware Attacks</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Encrypt control systems and operational data</li>
+                    <li>Halt energy distribution until ransom demands met</li>
+                    <li>Potential impact: Widespread blackouts affecting millions</li>
+                </ul>
+            </div>
+
+            <div class="threat-item">
+                <h4 style="color: #ff6b35; margin-top: 0;">Advanced Persistent Threats (APTs)</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Often state-sponsored adversaries</li>
+                    <li>Remain undetected for extended periods</li>
+                    <li>Can sabotage operations at strategic moments</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Comprehensive Defense Strategy</h2>
+
+            <div class="strategy-item">
+                <h4>1. Network Segmentation</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Isolate operational technology (OT) from IT systems</li>
+                    <li>Prevent lateral movement by attackers</li>
+                    <li>Create network zones with restricted access</li>
+                </ul>
+            </div>
+
+            <div class="strategy-item">
+                <h4>2. Security Monitoring (SIEM)</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Deploy Security Information and Event Management systems</li>
+                    <li>Monitor networks in real-time</li>
+                    <li>Detect anomalies and suspicious activity</li>
+                    <li>Alert security teams immediately</li>
+                </ul>
+            </div>
+
+            <div class="strategy-item">
+                <h4>3. Firewall & Intrusion Prevention</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Deploy firewalls at network perimeter</li>
+                    <li>Implement Intrusion Prevention Systems (IPS)</li>
+                    <li>Block unauthorized access attempts</li>
+                    <li>Regular configuration updates</li>
+                </ul>
+            </div>
+
+            <div class="strategy-item">
+                <h4>4. Patch Management</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Establish rigorous patching process</li>
+                    <li>Address vulnerabilities in software and ICS systems</li>
+                    <li>Prevent exploitation of known weaknesses</li>
+                    <li>Test patches before enterprise deployment</li>
+                </ul>
+            </div>
+
+            <div class="strategy-item">
+                <h4>5. Multi-Factor Authentication (MFA)</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Enforce MFA for all user accounts</li>
+                    <li>Special focus on administrator accounts</li>
+                    <li>Prevent unauthorized access even with stolen credentials</li>
+                </ul>
+            </div>
+
+            <div class="strategy-item">
+                <h4>6. Employee Training</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Security awareness for all staff</li>
+                    <li>Identify phishing and social engineering attempts</li>
+                    <li>Secure access protocols</li>
+                    <li>Create "human firewall" against threats</li>
+                </ul>
+            </div>
+
+            <div class="strategy-item">
+                <h4>7. Redundancy & Backups</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Regular backups of critical data</li>
+                    <li>Redundant power generation systems</li>
+                    <li>Failover capabilities</li>
+                    <li>Business continuity planning</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Incident Response Plan</h2>
+
+            <div class="phase-box">
+                <h4>Phase 1: Detection</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Continuous monitoring and anomaly detection</li>
+                    <li>Rapid alert systems</li>
+                    <li>Security team notification</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h4>Phase 2: Containment</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Isolate affected systems from network</li>
+                    <li>Prevent attack spread</li>
+                    <li>Preserve evidence</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h4>Phase 3: Investigation & Analysis</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Forensic analysis of breach</li>
+                    <li>Identify entry point and compromised systems</li>
+                    <li>Determine scope of damage</li>
+                    <li>Collect evidence for law enforcement</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h4>Phase 4: Communication</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Inform stakeholders transparently</li>
+                    <li>Notify government agencies and law enforcement</li>
+                    <li>Public communication (if necessary)</li>
+                    <li>Protect sensitive operational details</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h4>Phase 5: Mitigation & Eradication</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Remove malicious code</li>
+                    <li>Patch exploited vulnerabilities</li>
+                    <li>Eliminate threat completely</li>
+                    <li>Verify system integrity</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h4>Phase 6: Recovery</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Restore systems from verified backups</li>
+                    <li>Test functionality thoroughly</li>
+                    <li>Prioritize critical services (hospitals, water treatment)</li>
+                    <li>Restore normal operations</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h4>Phase 7: Post-Incident Review</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Assess response effectiveness</li>
+                    <li>Document lessons learned</li>
+                    <li>Update security procedures</li>
+                    <li>Improve future preparedness</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Risk Matrix</h2>
+            <p><strong>Potential impact:</strong> Prolonged outages, economic devastation</p>
+            <p style="margin-top: 20px;">High-impact, high-likelihood threats (ransomware, APTs) require immediate focus.</p>
+        </section>
+
+        <section class="section">
+            <h2>Key Takeaways</h2>
+            <div class="benefits">
+                <ul style="list-style: none; margin-left: 0;">
+                    <li>✓ <strong>Critical infrastructure requires layered defense strategy</strong></li>
+                    <li>✓ <strong>Incident response planning must address cascading effects</strong></li>
+                    <li>✓ <strong>Human factors critical to security</strong></li>
+                    <li>✓ <strong>Rapid detection and response minimize damage</strong></li>
+                    <li>✓ <strong>Recovery planning essential for business continuity</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="project-files">
+            <h2>Project Files</h2>
+            <p>📄 <strong>incident-response-playbook.md</strong> - Step-by-step response procedures</p>
+            <p>📄 <strong>risk-assessment.md</strong> - Detailed threat analysis</p>
+            <p>📄 <strong>recovery-procedures.md</strong> - System restoration guidelines</p>
+        </section>
+    </div>
+</body>
+</html>

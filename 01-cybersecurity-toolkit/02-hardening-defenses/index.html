@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardening Your Defenses</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1410 0%, #2d1b1a 50%, #1a1410 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 16px;
+            padding: 60px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(255, 107, 53, 0.1);
+        }
+
+        header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 25%, #a855f7 75%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            background: linear-gradient(135deg, #ff6b35 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin: 30px 0 15px 0;
+            color: #ff6b35;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #c0c0c0;
+            font-size: 1.05em;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: #c0c0c0;
+            font-size: 1.05em;
+        }
+
+        strong {
+            color: #ff6b35;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .layer-card {
+            background: rgba(255, 107, 53, 0.05);
+            border-left: 4px solid;
+            border-image: linear-gradient(135deg, #ff6b35 0%, #a855f7 100%) 1;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .layer-card h3 {
+            margin-top: 0;
+        }
+
+        .checklist {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #c0c0c0;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 15px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #ff6b35;
+        }
+
+        .challenge-box {
+            background: rgba(255, 107, 53, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .challenge-box strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .benefits {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .benefits li {
+            margin-bottom: 12px;
+        }
+
+        .benefits strong {
+            color: #a855f7;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent);
+            margin: 50px 0;
+        }
+
+        .project-files {
+            background: rgba(124, 58, 237, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+        }
+
+        .project-files p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            p, li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hardening Your Defenses</h1>
+        </header>
+
+        <section class="section">
+            <h2>Overview</h2>
+            <p>Developed a comprehensive security hardening plan for Windows operating systems, applications, and home networks to reduce vulnerabilities and strengthen defenses against cyberattacks.</p>
+        </section>
+
+        <section class="section">
+            <h2>What is Security Hardening?</h2>
+            <p>Security hardening is the process of enhancing IT systems by:</p>
+            <ul>
+                <li>Reducing vulnerabilities and attack surfaces</li>
+                <li>Implementing security policies and configurations</li>
+                <li>Preventing unauthorized access and data breaches</li>
+                <li>Maintaining system availability and compliance</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Three Hardening Layers</h2>
+
+            <div class="layer-card">
+                <h3>1. Operating System Hardening (Windows)</h3>
+                
+                <h4 style="color: #a855f7; font-size: 1.1em; margin-top: 20px;">User Account Control (UAC)</h4>
+                <ul style="margin-left: 25px; margin-bottom: 20px;">
+                    <li>Set to "Always Notify" to prevent unauthorized changes</li>
+                    <li>Alerts users to potential security threats</li>
+                    <li>Restricts administrative actions without permission</li>
+                </ul>
+
+                <h4 style="color: #a855f7; font-size: 1.1em;">Automatic Updates</h4>
+                <ul style="margin-left: 25px; margin-bottom: 20px;">
+                    <li>Enables timely application of critical security patches</li>
+                    <li>Prevents exploitation of known vulnerabilities</li>
+                    <li>Configured for automatic installation</li>
+                </ul>
+
+                <h4 style="color: #a855f7; font-size: 1.1em;">Windows Defender</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Real-time malware protection enabled</li>
+                    <li>Regular scans scheduled (weekly recommended)</li>
+                    <li>Maintains current virus/threat definitions</li>
+                </ul>
+            </div>
+
+            <div class="layer-card">
+                <h3>2. Application Hardening</h3>
+                <ul>
+                    <li>Keep all applications updated with latest patches</li>
+                    <li>Configure privacy and security settings</li>
+                    <li>Use security-focused browser extensions (HTTPS Everywhere)</li>
+                    <li>Implement principle of least privilege</li>
+                    <li>Regular security audits of installed software</li>
+                </ul>
+            </div>
+
+            <div class="layer-card">
+                <h3>3. Network Hardening</h3>
+                
+                <h4 style="color: #a855f7; font-size: 1.1em; margin-top: 20px;">WPA3 Encryption</h4>
+                <ul style="margin-left: 25px; margin-bottom: 20px;">
+                    <li>Latest Wi-Fi security standard</li>
+                    <li>Protects against brute-force attacks</li>
+                    <li>Enables higher-level wireless security</li>
+                </ul>
+
+                <h4 style="color: #a855f7; font-size: 1.1em;">Strong Wi-Fi Password</h4>
+                <ul style="margin-left: 25px; margin-bottom: 20px;">
+                    <li>Minimum 16 characters with mixed complexity</li>
+                    <li>Prevents unauthorized network access</li>
+                    <li>First line of defense for wireless security</li>
+                </ul>
+
+                <h4 style="color: #a855f7; font-size: 1.1em;">Router Firewall</h4>
+                <ul style="margin-left: 25px;">
+                    <li>Monitor all incoming/outgoing traffic</li>
+                    <li>Block suspicious connections</li>
+                    <li>Restrict access to specific ports and services</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Implementation Checklist</h2>
+            <div class="checklist">
+                <div class="checklist-item">
+                    <input type="checkbox" id="uac">
+                    <label for="uac">Enable UAC (set to "Always Notify")</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="updates">
+                    <label for="updates">Enable automatic Windows updates</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="defender">
+                    <label for="defender">Activate Windows Defender real-time protection</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="scans">
+                    <label for="scans">Schedule weekly Defender scans</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="apps">
+                    <label for="apps">Update all applications to latest versions</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="https">
+                    <label for="https">Install HTTPS Everywhere browser extension</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="wpa3">
+                    <label for="wpa3">Enable WPA3 on Wi-Fi router</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="wifi">
+                    <label for="wifi">Set strong Wi-Fi password (16+ characters)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="firewall">
+                    <label for="firewall">Configure router firewall rules</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="backup">
+                    <label for="backup">Create system backup before major updates</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="doc">
+                    <label for="doc">Document all security configurations</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Challenges & Mitigation</h2>
+            <div class="challenge-box">
+                <strong>Challenge:</strong> Update compatibility issues may disrupt system functionality
+                <div style="color: #a855f7; margin-top: 8px;"><strong>Solution:</strong> Create system backups before applying major updates</div>
+            </div>
+            <div class="challenge-box">
+                <strong>Challenge:</strong> Older devices may not support WPA3 encryption
+                <div style="color: #a855f7; margin-top: 8px;"><strong>Solution:</strong> Use WPA2 with strong password until device upgrade</div>
+            </div>
+            <div class="challenge-box">
+                <strong>Challenge:</strong> Multiple security tools may conflict
+                <div style="color: #a855f7; margin-top: 8px;"><strong>Solution:</strong> Test configurations in controlled environment first</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Security Benefits</h2>
+            <div class="benefits">
+                <ul style="list-style: none; margin-left: 0;">
+                    <li>✓ <strong>Reduced attack surface</strong></li>
+                    <li>✓ <strong>Prevention of common exploits</strong></li>
+                    <li>✓ <strong>Data integrity and confidentiality</strong></li>
+                    <li>✓ <strong>Regulatory compliance support</strong></li>
+                    <li>✓ <strong>Business continuity maintenance</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="project-files">
+            <h2>Project Files</h2>
+            <p>📄 <strong>windows-hardening-checklist.md</strong> - Detailed implementation steps</p>
+            <p>📄 <strong>hardening-script.ps1</strong> - PowerShell automation script</p>
+            <p>📄 <strong>network-hardening-guide.md</strong> - Wireless security configuration</p>
+        </section>
+    </div>
+</body>
+</html>
